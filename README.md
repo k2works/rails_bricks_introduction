@@ -24,7 +24,7 @@ RailsBrickを使ってRailsアプリケーションを構築してHerokuにデ�
 # 詳細 #
 
 ## <a name="1">環境セットアップ</a> ##
-
+    
     $ rvm install ruby-2.1.1
     $ rvm use ruby-2.1.1
     $ rvm gemset create rails_bricks
@@ -563,19 +563,19 @@ RailsBrickを使ってRailsアプリケーションを構築してHerokuにデ�
 
     $ heroku create --addons heroku-postgresql
     heroku create --addons heroku-postgresql
-    Creating floating-wildwood-8196... done, stack is cedar
-    Adding heroku-postgresql to floating-wildwood-8196... done
-    http://floating-wildwood-8196.herokuapp.com/ | git@heroku.com:floating-wildwood-8196.git
+    Creating gentle-coast-3866... done, stack is cedar
+    Adding heroku-postgresql to gentle-coast-3866... done
+    http://gentle-coast-3866.herokuapp.com/ | git@heroku.com:gentle-coast-3866.git
     Git remote heroku added
 
     $ git push heroku master
-    Warning: Permanently added the RSA host key for IP address '50.19.85.156' to the list of known hosts.
+    git push heroku master
     Initializing repository, done.
-    Counting objects: 94, done.
-    Compressing objects: 100% (80/80), done.
-    Writing objects: 100% (94/94), 26.44 KiB | 0 bytes/s, done.
-    Total 94 (delta 2), reused 0 (delta 0)
-
+    Counting objects: 101, done.
+    Compressing objects: 100% (87/87), done.
+    Writing objects: 100% (101/101), 35.34 KiB | 0 bytes/s, done.
+    Total 101 (delta 5), reused 0 (delta 0)
+    
     -----> Ruby app detected
     -----> Compiling Ruby/Rails
     -----> Using Ruby version: ruby-2.1.1
@@ -587,53 +587,53 @@ RailsBrickを使ってRailsアプリケーションを構築してHerokuにデ�
            Installing multi_json (1.9.2)
            Installing i18n (0.6.9)
            Installing rake (10.2.2)
-           Installing builder (3.1.4)
            Installing tzinfo (0.3.39)
+           Installing builder (3.1.4)
            Installing atomic (1.1.16)
-           Installing rack (1.5.2)
            Installing erubis (2.7.0)
            Installing polyglot (0.3.4)
-           Installing mime-types (1.25.1)
            Installing activerecord-deprecated_finders (1.0.3)
-           Installing sass (3.2.18)
+           Installing mime-types (1.25.1)
+           Installing rack (1.5.2)
            Installing arel (4.0.2)
            Installing coffee-script-source (1.7.0)
            Installing execjs (2.0.2)
+           Installing sass (3.2.18)
            Using json (1.8.1)
            Installing hike (1.2.3)
            Using bundler (1.5.2)
            Installing thor (0.19.1)
-           Installing rails_serve_static_assets (0.0.2)
            Installing bcrypt (3.1.7)
+           Installing rails_serve_static_assets (0.0.2)
            Installing tilt (1.4.1)
-           Installing rack-test (0.6.2)
            Installing rails_stdout_logging (0.0.3)
+           Installing rack-test (0.6.2)
            Installing thread_safe (0.3.1)
-           Installing font-awesome-sass (4.0.3.1)
            Installing treetop (1.4.15)
            Installing coffee-script (2.2.0)
            Installing bootstrap-sass (3.0.3.0)
+           Installing font-awesome-sass (4.0.3.1)
            Installing bcrypt-ruby (3.1.5)
-           Installing uglifier (2.4.0)
-           Installing rdoc (4.1.1)
-           Installing rails_12factor (0.0.2)
            Installing sprockets (2.11.0)
-           Installing activesupport (4.0.4)
+           Installing rdoc (4.1.1)
+           Installing uglifier (2.4.0)
+           Installing rails_12factor (0.0.2)
            Installing mail (2.5.4)
+           Installing activesupport (4.0.4)
            Installing sdoc (0.4.0)
-           Installing actionpack (4.0.4)
-           Installing actionmailer (4.0.4)
-           Installing jbuilder (1.5.3)
            Installing activemodel (4.0.4)
-           Installing kaminari (0.15.1)
-           Installing sprockets-rails (2.0.1)
-           Installing railties (4.0.4)
+           Installing jbuilder (1.5.3)
+           Installing actionpack (4.0.4)
            Installing activerecord (4.0.4)
+           Installing actionmailer (4.0.4)
+           Installing railties (4.0.4)
+           Installing sprockets-rails (2.0.1)
+           Installing friendly_id (5.0.3)
+           Installing kaminari (0.15.1)
            Installing jquery-rails (3.0.4)
            Installing coffee-rails (4.0.1)
-           Installing sass-rails (4.0.2)
-           Installing friendly_id (5.0.3)
            Installing turbolinks (2.1.0)
+           Installing sass-rails (4.0.2)
            Installing rails (4.0.4)
            Installing pg (0.17.1)
            Your bundle is complete!
@@ -651,65 +651,66 @@ RailsBrickを使ってRailsアプリケーションを構築してHerokuにデ�
            = 1.8.7 : gem install rdoc-data; rdoc-data --install
            = 1.9.1 : gem install rdoc-data; rdoc-data --install
            >= 1.9.2 : nothing to do! Yay!
-           Bundle completed (29.10s)
+           Bundle completed (21.75s)
            Cleaning up the bundler cache.
     -----> Writing config/database.yml to read from DATABASE_URL
     -----> Preparing app for Rails asset pipeline
            Running: rake assets:precompile
-           I, [2014-03-29T02:30:39.789279 #1188]  INFO -- : Writing /tmp/build_c24dcb8b-bdef-4871-b47f-e94468b90a9f/public/assets/favicon-3d3d7b2a2753789066cf419df98298a4.ico
-           I, [2014-03-29T02:30:45.335357 #1188]  INFO -- : Writing /tmp/build_c24dcb8b-bdef-4871-b47f-e94468b90a9f/public/assets/application-edbedaf0842d9ae52f882636e697f4e8.js
-           I, [2014-03-29T02:30:50.222830 #1188]  INFO -- : Writing /tmp/build_c24dcb8b-bdef-4871-b47f-e94468b90a9f/public/assets/application-a4675fb93558e61f870265bfd3cb6383.css
-           I, [2014-03-29T02:30:50.228910 #1188]  INFO -- : Writing /tmp/build_c24dcb8b-bdef-4871-b47f-e94468b90a9f/public/assets/bootstrap/glyphicons-halflings-regular-fb71914b40d1e1c20cc23982e6bce1c8.eot
-           I, [2014-03-29T02:30:50.229442 #1188]  INFO -- : Writing /tmp/build_c24dcb8b-bdef-4871-b47f-e94468b90a9f/public/assets/bootstrap/glyphicons-halflings-regular-db16ef179f96cbd0198908c13e47d5e1.svg
-           I, [2014-03-29T02:30:50.229861 #1188]  INFO -- : Writing /tmp/build_c24dcb8b-bdef-4871-b47f-e94468b90a9f/public/assets/bootstrap/glyphicons-halflings-regular-1837a54d175259b84d7e0a0481535bb5.ttf
-           I, [2014-03-29T02:30:50.230264 #1188]  INFO -- : Writing /tmp/build_c24dcb8b-bdef-4871-b47f-e94468b90a9f/public/assets/bootstrap/glyphicons-halflings-regular-1b3690c46cea789082015677ba9e5db2.woff
-           I, [2014-03-29T02:30:50.230623 #1188]  INFO -- : Writing /tmp/build_c24dcb8b-bdef-4871-b47f-e94468b90a9f/public/assets/fontawesome-webfont-3b53a5ecdb9473016ee097f74f4f16c0.eot
-           I, [2014-03-29T02:30:50.231183 #1188]  INFO -- : Writing /tmp/build_c24dcb8b-bdef-4871-b47f-e94468b90a9f/public/assets/fontawesome-webfont-51b69bdec08f19b3142dcd085ba6238a.svg
-           I, [2014-03-29T02:30:50.231821 #1188]  INFO -- : Writing /tmp/build_c24dcb8b-bdef-4871-b47f-e94468b90a9f/public/assets/fontawesome-webfont-69b0f4550dbb8738458172d11513538d.ttf
-           I, [2014-03-29T02:30:50.232258 #1188]  INFO -- : Writing /tmp/build_c24dcb8b-bdef-4871-b47f-e94468b90a9f/public/assets/fontawesome-webfont-9a3b8f90662fe9149f07a059f1a4c782.woff
-           Asset precompilation completed (12.46s)
+           I, [2014-03-29T06:00:17.341135 #1108]  INFO -- : Writing /tmp/build_28370750-0ed7-4572-8411-136aa653c2e0/public/assets/favicon-3d3d7b2a2753789066cf419df98298a4.ico
+           I, [2014-03-29T06:00:22.752465 #1108]  INFO -- : Writing /tmp/build_28370750-0ed7-4572-8411-136aa653c2e0/public/assets/application-edbedaf0842d9ae52f882636e697f4e8.js
+           I, [2014-03-29T06:00:27.728818 #1108]  INFO -- : Writing /tmp/build_28370750-0ed7-4572-8411-136aa653c2e0/public/assets/application-a4675fb93558e61f870265bfd3cb6383.css
+           I, [2014-03-29T06:00:27.734783 #1108]  INFO -- : Writing /tmp/build_28370750-0ed7-4572-8411-136aa653c2e0/public/assets/bootstrap/glyphicons-halflings-regular-fb71914b40d1e1c20cc23982e6bce1c8.eot
+           I, [2014-03-29T06:00:27.735324 #1108]  INFO -- : Writing /tmp/build_28370750-0ed7-4572-8411-136aa653c2e0/public/assets/bootstrap/glyphicons-halflings-regular-db16ef179f96cbd0198908c13e47d5e1.svg
+           I, [2014-03-29T06:00:27.735744 #1108]  INFO -- : Writing /tmp/build_28370750-0ed7-4572-8411-136aa653c2e0/public/assets/bootstrap/glyphicons-halflings-regular-1837a54d175259b84d7e0a0481535bb5.ttf
+           I, [2014-03-29T06:00:27.736236 #1108]  INFO -- : Writing /tmp/build_28370750-0ed7-4572-8411-136aa653c2e0/public/assets/bootstrap/glyphicons-halflings-regular-1b3690c46cea789082015677ba9e5db2.woff
+           I, [2014-03-29T06:00:27.736652 #1108]  INFO -- : Writing /tmp/build_28370750-0ed7-4572-8411-136aa653c2e0/public/assets/fontawesome-webfont-3b53a5ecdb9473016ee097f74f4f16c0.eot
+           I, [2014-03-29T06:00:27.737069 #1108]  INFO -- : Writing /tmp/build_28370750-0ed7-4572-8411-136aa653c2e0/public/assets/fontawesome-webfont-51b69bdec08f19b3142dcd085ba6238a.svg
+           I, [2014-03-29T06:00:27.737729 #1108]  INFO -- : Writing /tmp/build_28370750-0ed7-4572-8411-136aa653c2e0/public/assets/fontawesome-webfont-69b0f4550dbb8738458172d11513538d.ttf
+           I, [2014-03-29T06:00:27.738215 #1108]  INFO -- : Writing /tmp/build_28370750-0ed7-4572-8411-136aa653c2e0/public/assets/fontawesome-webfont-9a3b8f90662fe9149f07a059f1a4c782.woff
+           Asset precompilation completed (12.15s)
            Cleaning assets
            Running: rake assets:clean
     -----> Discovering process types
            Procfile declares types -> (none)
            Default types for Ruby  -> console, rake, web, worker
-
+    
     -----> Compressing... done, 23.3MB
     -----> Launching... done, v6
-           http://floating-wildwood-8196.herokuapp.com/ deployed to Heroku
-
-    To git@heroku.com:floating-wildwood-8196.git
-    * [new branch]      master -> master
-
+           http://gentle-coast-3866.herokuapp.com/ deployed to Heroku
+    
+    To git@heroku.com:gentle-coast-3866.git
+     * [new branch]      master -> master
+ 
 ### データベースマイグレーション ###
 
     $ heroku run rake db:migrate
-    Running `rake db:migrate` attached to terminal... up, run.5252
+    heroku run rake db:migrate
+    Running `rake db:migrate` attached to terminal... up, run.3304
     Migrating to CreateFriendlyIdSlugs (20131103142222)
     == 20131103142222 CreateFriendlyIdSlugs: migrating ============================
     -- create_table(:friendly_id_slugs)
-       -> 0.0282s
+    -> 0.0559s
     -- add_index(:friendly_id_slugs, :sluggable_id)
-       -> 0.0121s
+    -> 0.0099s
     -- add_index(:friendly_id_slugs, [:slug, :sluggable_type])
-       -> 0.0113s
+    -> 0.0287s
     -- add_index(:friendly_id_slugs, [:slug, :sluggable_type, :scope], {:unique=>true})
-       -> 0.0114s
+    -> 0.0289s
     -- add_index(:friendly_id_slugs, :sluggable_type)
-       -> 0.0119s
-    == 20131103142222 CreateFriendlyIdSlugs: migrated (0.0762s) ===================
-
+    -> 0.0149s
+    == 20131103142222 CreateFriendlyIdSlugs: migrated (0.1392s) ===================
+    
     Migrating to CreateUsers (20131103142223)
     == 20131103142223 CreateUsers: migrating ======================================
     -- create_table(:users)
-       -> 0.0248s
+    -> 0.0287s
     -- add_index(:users, :slug, {:unique=>true})
-       -> 0.0128s
-    == 20131103142223 CreateUsers: migrated (0.0380s) =============================
+    -> 0.0112s
+    == 20131103142223 CreateUsers: migrated (0.0402s) =============================
 
     $ heroku run rake db:seed
     heroku run rake db:seed
-    Running `rake db:seed` attached to terminal... up, run.6945
+    Running `rake db:seed` attached to terminal... up, run.1246
     
 ### アプリケーションの確認 ###
 
@@ -720,7 +721,7 @@ RailsBrickを使ってRailsアプリケーションを構築してHerokuにデ�
     $ heroku ps
     heroku ps
     === web (1X): `bin/rails server -p $PORT -e $RAILS_ENV`
-    web.1: up 2014/03/29 11:31:09 (~ 9m ago)
+    web.1: up 2014/03/29 15:00:41 (~ 8m ago)
 
     $ heroku open
 
