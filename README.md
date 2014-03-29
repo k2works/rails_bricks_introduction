@@ -768,6 +768,13 @@ RailsBrickを使ってRailsアプリケーションを構築してHerokuにデ�
     $ gem install foreman
     $ foreman start
 
+### アプリケーションの名前変更 ###
+
+    $ heroku apps:rename rails-bricks-introduction
+    Renaming gentle-coast-3866 to rails-bricks-introduction... done
+    http://rails-bricks-introduction.herokuapp.com/ | git@heroku.com:rails-bricks-introduction.git
+    Git remote heroku updated
+
 # 参照 #
 
 [RailsBricks](http://www.railsbricks.net/)
