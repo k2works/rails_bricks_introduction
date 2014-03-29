@@ -562,14 +562,12 @@ RailsBrickを使ってRailsアプリケーションを構築してHerokuにデ�
 ### デプロイ ###
 
     $ heroku create --addons heroku-postgresql
-    heroku create --addons heroku-postgresql
     Creating gentle-coast-3866... done, stack is cedar
     Adding heroku-postgresql to gentle-coast-3866... done
     http://gentle-coast-3866.herokuapp.com/ | git@heroku.com:gentle-coast-3866.git
     Git remote heroku added
 
     $ git push heroku master
-    git push heroku master
     Initializing repository, done.
     Counting objects: 101, done.
     Compressing objects: 100% (87/87), done.
@@ -684,7 +682,6 @@ RailsBrickを使ってRailsアプリケーションを構築してHerokuにデ�
 ### データベースマイグレーション ###
 
     $ heroku run rake db:migrate
-    heroku run rake db:migrate
     Running `rake db:migrate` attached to terminal... up, run.3304
     Migrating to CreateFriendlyIdSlugs (20131103142222)
     == 20131103142222 CreateFriendlyIdSlugs: migrating ============================
@@ -709,7 +706,6 @@ RailsBrickを使ってRailsアプリケーションを構築してHerokuにデ�
     == 20131103142223 CreateUsers: migrated (0.0402s) =============================
 
     $ heroku run rake db:seed
-    heroku run rake db:seed
     Running `rake db:seed` attached to terminal... up, run.1246
     
 ### アプリケーションの確認 ###
@@ -764,30 +760,12 @@ RailsBrickを使ってRailsアプリケーションを構築してHerokuにデ�
     $ touch Procfile
 
     web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb
-
-    $ touch config/unicorn.rb
-    touch config/unicorn.rb
-    $ echo "RACK_ENV=development" >>.env
-    echo "RACK_ENV=development" >>.env
-    bash-3.2$ echo "PORT=3000" >> .env
-    echo "PORT=3000" >> .env
+   
+    $ echo "RACK_ENV=development" >>.env 
+    $ echo "PORT=3000" >> .env
     $ echo ".env" >> .gitignore 
-    echo ".env" >> .gitignore 
     $ git commit -m "add .env to .gitignore"
-    git commit -m "add .env to .gitignore"
-    On branch master
-    Changes not staged for commit:
-	    modified:   .gitignore
-	    modified:   Gemfile
-	    modified:   Gemfile.lock
-
-    Untracked files:
-	    config/unicorn.rb
-
-    no changes added to commit
-
     $ gem install foreman
-
     $ foreman start
 
 # 参照 #
