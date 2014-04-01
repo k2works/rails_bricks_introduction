@@ -20,6 +20,7 @@ RailsBrickを使ってRailsアプリケーションを構築してHerokuにデ�
 + [環境セットアップ](#1)
 + [アプリケーションのセットアップ](#2)
 + [アプリケーションのデプロイ](#3)
++ [日本語対応](#4)
 
 # 詳細 #
 
@@ -775,6 +776,50 @@ RailsBrickを使ってRailsアプリケーションを構築してHerokuにデ�
     http://rails-bricks-introduction.herokuapp.com/ | git@heroku.com:rails-bricks-introduction.git
     Git remote heroku updated
 
+## <a name="4">日本語対応</a> ##
+
+Gemfileに追加
+
+    gem 'i18n_generators'
+
+bundle実行後日本語ファイル生成
+
+    $ bundle
+    $ rails g i18n_locale ja
+    updating application.rb...
+        conflict  config/application.rb
+    Overwrite /Users/k2works/projects/github/rails_bricks_introduction/config/application.rb? (enter "h" for help) [Ynaqdh] Y
+           force  config/application.rb
+    fetching ja.yml from rails-i18n repository...
+         create  config/locales/ja.yml
+
+モデル用日本語ファイル生成
+
+    $ rails g i18n_translation ja
+    translating models to ja...
+    failed to translate "user" into "ja" language.
+    failed to translate "password_digest" into "ja" language.
+    failed to translate "username" into "ja" language.
+    failed to translate "slug" into "ja" language.
+    failed to translate "admin" into "ja" language.
+    failed to translate "email" into "ja" language.
+        create  config/locales/translation_ja.yml
+
+生成されたファイルを編集する
+
+    ja:
+      activerecord:
+        models:
+          user: ユーザー
+
+        attributes:
+          user:
+            admin: 管理者
+            email: eメール
+            username: ユーザー名
+            password: パスワード
+            password_confirmation: パスワード再確認
+
 # 参照 #
 
 [RailsBricks](http://www.railsbricks.net/)
@@ -783,3 +828,6 @@ RailsBrickを使ってRailsアプリケーションを構築してHerokuにデ�
 
 [Getting Started with Rails 4.x on Heroku](https://devcenter.heroku.com/articles/getting-started-with-rails4)
 
+[Railsの多言語化対応 I18nのやり方を整理してみた！【国際化/英語化】](http://morizyun.github.io/blog/i18n-english-rails-ruby-many-languages/)
+
+[amatsuda / i18n_generators](https://github.com/amatsuda/i18n_generators)

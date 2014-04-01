@@ -55,3 +55,6 @@ end
 
 # Unicorn
 gem 'unicorn'
+
+# i18n
+gem 'i18n_generators'
